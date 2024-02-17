@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* Variables */
+:root {
+	--bg-color-primary: var(--eerie-black);
+
+	--border-color: black;
+	--shadow-color: rgba(0, 0, 0, 0.5);
+
+	--nav-color: #655614;
+	--nav-color-hover: #7045f1;
+	--nav-border-color: #7045f1;
+
+	/* ! Not as important, no touchy below usually */
+
+	--font-color-title: var(--imperial-red);
+	--font-color-subtitle: var(--imperial-red);
+	--font-color-normal: var(--white-smoke);
+	--font-color-heavy: var(--imperial-red);
+	--font-color-link: var(--imperial-red);
+	--font-color-link-hover: var(--imperial-red-2);
+
+	/* CSS HEX */
+	--night: #0b090aff;
+	--eerie-black: #161a1dff;
+	--blood-red: #660708ff;
+	--cornell-red: #a4161aff;
+	--cornell-red-2: #ba181bff;
+	--imperial-red: #e5383bff;
+	--imperial-red-2: #f25f5cff;
+	--silver: #b1a7a6ff;
+	--timberwolf: #d3d3d3ff;
+	--white-smoke: #f5f3f4ff;
+	--white: #ffffffff;
+
+	--font-size-title: 2.5rem;
+	--font-size-subtitle: 1.5rem;
+	--font-size-normal: 1rem;
+	--font-size-small: 0.75rem;
+
+	--font-weight-title: 700;
+	--font-weight-subtitle: 600;
+	--font-weight-normal: 400;
+	--font-weight-small: 300;
+	--font-weight-link: 600;
+
+	--font-family-title: "Roboto Mono", sans-serif;
+	--font-family-subtitle: "Roboto Mono", sans-serif;
+	--font-family-normal: "Roboto Mono", sans-serif;
+	--font-family-small: "Roboto Mono", sans-serif;
+	--font-family-link: "Roboto Mono", sans-serif;
+}
+
+/* Below is a css reset. It fixes some common issues with cross-browser compatibility. */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* Actual CSS */
+body,
+main {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box !important;
+	font-family: var(--font-family-normal) !important;
+	background-color: var(--bg-color-primary) !important;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	/* This is a hack to fix the scroll-behavior on Safari */
+	-webkit-overflow-scrolling: touch;
+}
+
+.hidden {
+	display: none;
+}
+
+.fadeIn {
+	opacity: 0;
+	transition: opacity 1s;
+	overflow-x: hidden;
+}
+
+.fadeIn.visible {
+	opacity: 1;
+}
+
+.swipeFromLeft {
+	transform: translateX(-100vw);
+	transition: transform 1s;
+	overflow-x: hidden;
+}
+
+.swipeFromLeft.visible {
+	transform: translateX(0);
+}
+
+.swipeFromRight {
+	transform: translateX(100%);
+	transition: transform 1s;
+	overflow-x: hidden;
+}
+
+.swipeFromRight.visible {
+	transform: translateX(0);
+}
+
+.z-0 {
+	z-index: 0;
+}
+
+.z-1 {
+	z-index: 1;
+}
+
+.z-2 {
+	z-index: 2;
+}
+
+.z-3 {
+	z-index: 3;
+}
+
+.z-4 {
+	z-index: 4;
+}
+
+.z-5 {
+	z-index: 5;
+}
+
+h1 {
+	font-size: var(--font-size-title);
+	font-weight: var(--font-weight-title);
+	font-family: var(--font-family-title);
+	color: var(--font-color-title);
+}
+
+h2 {
+	font-size: var(--font-size-subtitle);
+	font-weight: var(--font-weight-subtitle);
+	font-family: var(--font-family-subtitle);
+	color: var(--font-color-subtitle);
+}
+
+h3 {
+	font-size: var(--font-size-alttitle);
+	font-weight: var(--font-weight-alttitle);
+	font-family: var(--font-family-alttitle);
+	color: var(--font-color-alttitle);
+}
+
+p {
+	font-size: var(--font-size-normal);
+	font-weight: var(--font-weight-normal);
+	font-family: var(--font-family-normal);
+	color: var(--font-color-normal);
+
+	margin-bottom: 0 !important;
+}
+
+a {
+	font-size: var(--font-size-normal);
+	font-weight: var(--font-weight-link);
+	font-family: var(--font-family-link) !important;
+	color: var(--font-color-link) !important;
+	text-decoration: none !important;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	49% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+a:hover {
+	color: var(--font-color-link-hover) !important;
+	/* text-decoration: underline !important; */
+}
+
+hr {
+	margin-bottom: 1rem !important;
+	--col: var(--cyber-yellow);
+	opacity: 1;
+	color: var(--col);
+	background-color: var(--col);
+	border-color: var(--col);
+	width: 80%;
+	height: 2px;
+	margin: 0.75rem 0 !important;
+	max-width: 650px;
+}
