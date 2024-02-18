@@ -25,25 +25,25 @@ export default function Navbar({}: Props) {
 	}, []);
 
 	return (
-		<nav>
+		<nav className="h-100 w-100">
 			<div className={`${styles.NavWrapper}`} ref={navbarRef}>
 				<ul className="d-flex flex-row justify-content-around align-items-center">
 					<li className="col-lg-5 col-sm-6" id={`${styles.NavTitle}`}>
 						<div className="d-flex flex-row justify-content-lg-center p-lg-0 p-3 align-items-center">
 							<div className="d-flex flex-row align-items-center justify-content-center">
 								<Link href="/" className="mx-2">
-									{"> ATLAS"}
+									{"> ATLASISGAY.LOL"}
 								</Link>
 								<div id={styles.terminalitem}></div>
 							</div>
 						</div>
 					</li>
-					<li className="col-lg-1 d-flex align-items-center justify-content-evenly"></li>
-					<li className="col-lg-6 col-xs-6 d-flex align-items-center justify-content-center">
-						<Link href="/admin" className="mx-lg-5 mx-3">
+					<li className="col-lg-2 d-flex align-items-center justify-content-evenly"></li>
+					<li className="col-lg-5 col-xs-6 d-flex align-items-center justify-content-center">
+						<Link href="/about" className="mx-lg-5 mx-3">
 							ABOUT
 						</Link>
-						<Link href="/createprofile">SOCIALS</Link>
+						<Link href="/art">ART</Link>
 					</li>
 				</ul>
 			</div>

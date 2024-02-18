@@ -3,13 +3,14 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	height: 64px;
+	height: 10vh;
 	width: 100%;
-	background-color: rgb(17, 19, 21);
+	background-color: rgb(22, 22, 22);
 	position: fixed;
 	z-index: 6;
 	transition: box-shadow 0.25s ease, background-color 0.25s ease;
 }
+/* if not mobile phone navwrapper height is 64px */
 
 .NavWrapper ul {
 	width: 100%;

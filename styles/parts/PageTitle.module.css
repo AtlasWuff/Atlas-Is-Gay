@@ -1,0 +1,80 @@
+#MainTitle {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+#titleBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+#titleBg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -2;
+}
+
+#titleBg::after {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: -1;
+}
+
+#titleWrapper {
+	/* background-color: rebeccapurple; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+#motto {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.waveWrap {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.wave {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 3;
+	/* background-color: rgba(188, 37, 37, 0.5); */
+	overflow: hidden;
+}
+
+.wave img {
+	object-fit: cover;
+	width: 100%;
+}
+
+#notTitle {
+	position: relative;
+	z-index: 3;
+}

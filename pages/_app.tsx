@@ -17,7 +17,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
 		// Layout applies any components that are common to all pages
 		<>
 			<Layout>
-				<AnimatePresence mode="wait" initial={true}>
+				<AnimatePresence mode="wait" initial={false}>
 					{/* <SecLayout> */}
 					<Component {...pageProps} key={router.asPath} />
 					{/* </SecLayout> */}

@@ -12,6 +12,7 @@ import styles from "../styles/pages/Home.module.css";
 
 // Component imports
 import SecLayout from "../components/_seclayout";
+import PageTitle from "../components/parts/PageTitle";
 
 // Page
 export default function Home() {
@@ -24,7 +25,67 @@ export default function Home() {
 			</Head>
 
 			{/* ! Main homepage content */}
-			<main></main>
+			<main className={styles.main}>
+				{/* 64px div spacer */}
+				<div className=""></div>
+
+				<PageTitle>
+					<h1 className="text-center container-sm">Atlas</h1>
+					<p className="text-center container-sm">
+						{/* eslint-disable-next-line react/no-unescaped-entities */}
+						Now that you're here, follow me on{" "}
+						<a href="" target="_blank">
+							twitter
+						</a>
+					</p>
+					<p>(and everywhere else :3)</p>
+					<ul className={styles.socialList}>
+						<li>
+							<Image
+								src="/img/socials/instagram.svg"
+								width={40}
+								height={40}
+								alt=""
+							/>
+						</li>
+						<li>
+							<Image
+								src="/img/socials/twitter.svg"
+								width={40}
+								height={40}
+								alt=""
+							/>
+						</li>
+						<li>
+							<a
+								href="https://t.me/Its-Atlas"
+								target="_blank"
+								rel="noreferrer"
+							></a>
+							<Image
+								src="/img/socials/telegram.svg"
+								width={40}
+								height={40}
+								alt=""
+							/>
+						</li>
+						<li>
+							<a
+								href="https://github.com/Its-Atlas"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/github.svg"
+									width={40}
+									height={40}
+									alt=""
+								/>
+							</a>
+						</li>
+					</ul>
+				</PageTitle>
+			</main>
 		</SecLayout>
 	);
 }

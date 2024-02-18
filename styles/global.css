@@ -22,24 +22,26 @@
 	--font-color-link-hover: var(--imperial-red-2);
 
 	/* CSS HEX */
-	--night: #0b090aff;
-	--eerie-black: #161a1dff;
+	--night: rgb(12, 12, 12);
+	--eerie-black: #212121;
 	--blood-red: #660708ff;
 	--cornell-red: #a4161aff;
 	--cornell-red-2: #ba181bff;
 	--imperial-red: #e5383bff;
-	--imperial-red-2: #f25f5cff;
+	--imperial-red-2: rgb(243, 101, 99);
 	--silver: #b1a7a6ff;
 	--timberwolf: #d3d3d3ff;
-	--white-smoke: #f5f3f4ff;
+	--white-smoke: #f6f4f5;
 	--white: #ffffffff;
 
 	--font-size-title: 2.5rem;
 	--font-size-subtitle: 1.5rem;
+	--font-size-alttitle: 1rem;
 	--font-size-normal: 1rem;
 	--font-size-small: 0.75rem;
 
 	--font-weight-title: 700;
+	--font-weight-alttitle: 500;
 	--font-weight-subtitle: 600;
 	--font-weight-normal: 400;
 	--font-weight-small: 300;
@@ -155,7 +157,7 @@ h2 {
 h3 {
 	font-size: var(--font-size-alttitle);
 	font-weight: var(--font-weight-alttitle);
-	font-family: var(--font-family-alttitle);
+	font-family: var(--font-family-title);
 	color: var(--font-color-alttitle);
 }
 
@@ -204,4 +206,13 @@ hr {
 	height: 2px;
 	margin: 0.75rem 0 !important;
 	max-width: 650px;
+}
+
+.h-64 {
+	height: 64px;
+}
+
+html,
+body {
+	height: 100%;
 }

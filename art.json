@@ -1,0 +1,26 @@
+[
+	{
+		"Title": "Reference Sheet",
+		"Artist": "@thelemonadestand_art",
+		"Link": "https://www.instagram.com/thelemonadestand_art/",
+		"Path": "/img/art/Ref.png"
+	},
+	{
+		"Title": "Badge",
+		"Artist": "@Donutinha",
+		"Link": "https://twitter.com/Donutinha",
+		"Path": "/img/art/Badge.png"
+	},
+	{
+		"Title": "Icon",
+		"Artist": "@Marshy_Birb_Boi",
+		"Link": "https://twitter.com/Marshy_Birb_Boi",
+		"Path": "/img/art/Icon.png"
+	},
+	{
+		"Title": "Christmas Icon",
+		"Artist": "@ZuhiShy",
+		"Link": "https://twitter.com/ZuhiShy",
+		"Path": "/img/art/JollyIcon.png"
+	}
+]
