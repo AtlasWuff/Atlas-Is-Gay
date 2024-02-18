@@ -80,12 +80,12 @@ export default function Home() {
 						</li>
 						<li>
 							<a
-								href="https://github.com/Its-Atlas"
+								href="https://steamcommunity.com/id/ItsAtlas___/"
 								target="_blank"
 								rel="noreferrer"
 							>
 								<Image
-									src="/img/socials/github.svg"
+									src="/img/socials/steam.svg"
 									width={40}
 									height={40}
 									alt=""
