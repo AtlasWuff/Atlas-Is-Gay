@@ -34,7 +34,11 @@ export default function Home() {
 					<p className="text-center container-sm">
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
 						Now that you're here, follow me on{" "}
-						<a href="" target="_blank">
+						<a
+							href="https://twitter.com/_ItsAtlas"
+							target="_blank"
+							rel="noreferrer"
+						>
 							twitter
 						</a>
 					</p>
