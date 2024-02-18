@@ -27,7 +27,9 @@ export default function Art() {
 			{/* ! Main homepage content */}
 			<main className={styles.main}>
 				<div />
-				<h1 className="w-100 d-flex justify-content-center align-items-center">Coming soon</h1>>
+				<h1 className="w-100 d-flex justify-content-center align-items-center">
+					Coming soon
+				</h1>
 			</main>
 		</SecLayout>
 	);
