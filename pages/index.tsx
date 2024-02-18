@@ -69,17 +69,14 @@ export default function Home() {
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://t.me/ItssAtlas"
-								target="_blank"
-								rel="noreferrer"
-							></a>
-							<Image
-								src="/img/socials/telegram.svg"
-								width={40}
-								height={40}
-								alt=""
-							/>
+							<a href="https://t.me/ItssAtlas" target="_blank" rel="noreferrer">
+								<Image
+									src="/img/socials/telegram.svg"
+									width={40}
+									height={40}
+									alt=""
+								/>
+							</a>
 						</li>
 						<li>
 							<a
