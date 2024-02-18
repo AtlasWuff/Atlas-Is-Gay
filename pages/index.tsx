@@ -41,24 +41,36 @@ export default function Home() {
 					<p>(and everywhere else :3)</p>
 					<ul className={styles.socialList}>
 						<li>
-							<Image
-								src="/img/socials/instagram.svg"
-								width={40}
-								height={40}
-								alt=""
-							/>
-						</li>
-						<li>
-							<Image
-								src="/img/socials/twitter.svg"
-								width={40}
-								height={40}
-								alt=""
-							/>
+							<a
+								href="https://instagram.com/itsatlas___"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/instagram.svg"
+									width={40}
+									height={40}
+									alt=""
+								/>
+							</a>
 						</li>
 						<li>
 							<a
-								href="https://t.me/Its-Atlas"
+								href="https://twitter.com/_ItsAtlas"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/twitter.svg"
+									width={40}
+									height={40}
+									alt=""
+								/>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://t.me/ItssAtlas"
 								target="_blank"
 								rel="noreferrer"
 							></a>
