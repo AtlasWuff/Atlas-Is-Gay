@@ -17,13 +17,13 @@ interface Props {
 export default function SecLayout({ children }: Props) {
 	return (
 		<>
-			{/* <motion.div
+			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-			> */}
-			{children}
-			{/* </motion.div> */}
+			>
+				{children}
+			</motion.div>
 		</>
 	);
 }
