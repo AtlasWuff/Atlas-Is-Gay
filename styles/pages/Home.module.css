@@ -20,6 +20,10 @@
 	margin-right: 15px;
 }
 
+.socialList li {
+	cursor: pointer;
+}
+
 .socialList li:hover {
 	transform: scale(1.2);
 	transition: transform 0.1s;
@@ -28,4 +32,14 @@
 .socialList img {
 	filter: invert(89%) sepia(3%) saturate(55%) hue-rotate(285deg)
 		brightness(108%) contrast(98%);
+}
+
+.discName a {
+	cursor: pointer;
+}
+
+.discClick {
+	font-size: smaller;
+	/* font-style: italic;
+	font-weight: bold; */
 }

@@ -6,6 +6,7 @@ import Script from "next/script";
 import { use, useEffect, useRef, useState } from "react";
 import { useEffectOnce } from "usehooks-ts";
 import { useAnimation, motion } from "framer-motion";
+import copy from "copy-to-clipboard";
 
 // CSS imports
 import styles from "../styles/pages/Home.module.css";
@@ -16,6 +17,9 @@ import PageTitle from "../components/parts/PageTitle";
 
 // Page
 export default function Home() {
+	// showDiscordName state
+	const [showDiscordName, setShowDiscordName] = useState(false);
+
 	return (
 		<SecLayout>
 			{/* Meta tags */}
@@ -84,10 +88,10 @@ export default function Home() {
 						</li>
 						<li>
 							<a
-								href="https://discord.com/users/484343723426054150"
+								// href="https://discord.com/users/484343723426054150"
 								target="_blank"
 								rel="noreferrer"
-								onClick={() => alert("ItsAtlas__")}
+								onClick={() => setShowDiscordName(!showDiscordName)}
 							>
 								<Image
 									src="/img/socials/discord.svg"
@@ -112,6 +116,15 @@ export default function Home() {
 							</a>
 						</li>
 					</ul>
+					{showDiscordName && (
+						<>
+							<p className={styles.discName}>
+								You can add me on Discord @{" "}
+								<a onClick={() => copy("ItsAtlas__")}>ItsAtlas__</a>
+							</p>
+							<p className={styles.discClick}>{" (Click to copy) "}</p>
+						</>
+					)}
 				</PageTitle>
 			</main>
 		</SecLayout>
