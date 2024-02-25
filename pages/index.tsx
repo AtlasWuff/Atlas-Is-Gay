@@ -84,6 +84,20 @@ export default function Home() {
 						</li>
 						<li>
 							<a
+								href="https://discord.com/users/484343723426054150"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/discord.svg"
+									width={40}
+									height={40}
+									alt=""
+								/>
+							</a>
+						</li>
+						<li>
+							<a
 								href="https://steamcommunity.com/id/ItsAtlas___/"
 								target="_blank"
 								rel="noreferrer"
