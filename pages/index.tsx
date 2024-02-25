@@ -87,6 +87,7 @@ export default function Home() {
 								href="https://discord.com/users/484343723426054150"
 								target="_blank"
 								rel="noreferrer"
+								onClick={() => alert("ItsAtlas__")}
 							>
 								<Image
 									src="/img/socials/discord.svg"
