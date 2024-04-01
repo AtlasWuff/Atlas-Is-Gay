@@ -43,7 +43,7 @@ export default function Navbar({}: Props) {
 						<Link href="/about" className="mx-lg-5 mx-3">
 							ABOUT
 						</Link>
-						<Link href="/art">ART</Link>
+						{/* <Link href="/art">ART</Link> */}
 					</li>
 				</ul>
 			</div>
