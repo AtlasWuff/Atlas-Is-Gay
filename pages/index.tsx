@@ -39,7 +39,7 @@ export default function Home() {
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
 						Now that you're here, follow me on{" "}
 						<a
-							href="https://twitter.com/_ItsAtlas"
+							href="https://twitter.com/AtlasWuff"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -50,7 +50,7 @@ export default function Home() {
 					<ul className={styles.socialList}>
 						<li>
 							<a
-								href="https://instagram.com/itsatlas___"
+								href="https://instagram.com/atlaswuff"
 								target="_blank"
 								rel="noreferrer"
 							>
@@ -64,7 +64,7 @@ export default function Home() {
 						</li>
 						<li>
 							<a
-								href="https://twitter.com/_ItsAtlas"
+								href="https://twitter.com/AtlasWuff"
 								target="_blank"
 								rel="noreferrer"
 							>
@@ -77,7 +77,7 @@ export default function Home() {
 							</a>
 						</li>
 						<li>
-							<a href="https://t.me/ItssAtlas" target="_blank" rel="noreferrer">
+							<a href="https://t.me/AtlasWuff" target="_blank" rel="noreferrer">
 								<Image
 									src="/img/socials/telegram.svg"
 									width={40}
@@ -120,7 +120,7 @@ export default function Home() {
 						<>
 							<p className={styles.discName}>
 								You can add me on Discord @{" "}
-								<a onClick={() => copy("ItsAtlas__")}>ItsAtlas__</a>
+								<a onClick={() => copy("AtlasWuff")}>AtlasWuff</a>
 							</p>
 							<p className={styles.discClick}>{" (Click to copy) "}</p>
 						</>
