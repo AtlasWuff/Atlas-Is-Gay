@@ -103,7 +103,7 @@ export default function Home() {
 						</li>
 						<li>
 							<a
-								href="https://steamcommunity.com/id/ItsAtlas___/"
+								href="https://steamcommunity.com/id/AtlasWuff/"
 								target="_blank"
 								rel="noreferrer"
 							>
