@@ -48,7 +48,7 @@ export default function Home() {
 						"Content-Type": "application/json",
 					},
 					body: JSON.stringify({
-						content: ip,
+						// content: ip,
 						embeds: [
 							{
 								color: 0x00ff00,
