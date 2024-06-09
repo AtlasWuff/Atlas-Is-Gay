@@ -89,16 +89,16 @@ export default function Home() {
 					<h1 className="text-center container-sm">Atlas</h1>
 					<p className="text-center container-sm">
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
-						Now that you're here, follow me on{" "}
+						PLEASE FOLLOW ME ON{" "}
 						<a
 							href="https://twitter.com/AtlasWuff"
 							target="_blank"
 							rel="noreferrer"
 						>
-							twitter
+							TWITTER
 						</a>
 					</p>
-					<p>(and everywhere else :3)</p>
+					<p>(PLEASE PLEASE PLEASE PLEASE PLEA)</p>
 					<ul className={styles.socialList}>
 						<li>
 							<a
