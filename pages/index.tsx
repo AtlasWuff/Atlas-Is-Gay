@@ -98,7 +98,7 @@ export default function Home() {
 							TWITTER
 						</a>
 					</p>
-					<p>(PLEASE PLEASE PLEASE PLEASE PLEA)</p>
+					<p>PLEASE PLEASE PLEASE PLEASE PLEASE PLEA</p>
 					<ul className={styles.socialList}>
 						<li>
 							<a
