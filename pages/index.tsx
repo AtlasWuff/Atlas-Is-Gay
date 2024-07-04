@@ -86,19 +86,19 @@ export default function Home() {
 				<div className=""></div>
 
 				<PageTitle>
-					<h1 className="text-center container-sm">Atlas</h1>
+					{/* <h1 className="text-center container-sm">Atlas</h1> */}
 					<p className="text-center container-sm">
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
-						PLEASE FOLLOW ME ON{" "}
+						umm uhhh follow me on{" "}
 						<a
-							href="https://twitter.com/AtlasWuff"
+							href="https://instagram.com/atlaswuff"
 							target="_blank"
 							rel="noreferrer"
 						>
-							TWITTER
+							insta
 						</a>
 					</p>
-					<p>PLEASE PLEASE PLEASE PLEASE PLEASE PLEA</p>
+					<p> pls {"<3"}</p>
 					<ul className={styles.socialList}>
 						<li>
 							<a
