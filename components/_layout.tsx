@@ -40,7 +40,7 @@ export default function Layout({ children }: Props) {
 			</Head>
 
 			{/* Webpage global layout */}
-			<Navbar />
+			{/* <Navbar /> */}
 			{children}
 			{/* <Footer /> */}
 		</>

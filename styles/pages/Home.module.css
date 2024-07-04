@@ -5,9 +5,9 @@
 }
 
 /* first occurence of div in .main */
-.main div:first-child {
+/* .main div:first-child {
 	height: 10vh;
-}
+} */
 
 .socialList {
 	display: flex;
