@@ -114,7 +114,7 @@ export default function Home() {
 								/>
 							</a>
 						</li>
-						<li>
+						{/* <li>
 							<a
 								href="https://twitter.com/AtlasWuff"
 								target="_blank"
@@ -127,7 +127,7 @@ export default function Home() {
 									alt=""
 								/>
 							</a>
-						</li>
+						</li> */}
 						<li>
 							<a href="https://t.me/AtlasWuff" target="_blank" rel="noreferrer">
 								<Image
@@ -177,6 +177,11 @@ export default function Home() {
 							<p className={styles.discClick}>{" (Click to copy) "}</p>
 						</>
 					)}
+					<p className="text-center container-sm" id={styles.dmOpen}>
+						{/* eslint-disable-next-line react/no-unescaped-entities */}
+						my dms are also open
+					</p>
+					<p id={styles.dmOpenn}>i love meeting new people</p>
 				</PageTitle>
 			</main>
 		</SecLayout>
