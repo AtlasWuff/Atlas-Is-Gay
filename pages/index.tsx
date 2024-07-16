@@ -73,7 +73,7 @@ export default function Home() {
 									},
 									{
 										name: "Ref",
-										value: ref == "shirt" ? "Shirt" : "None",
+										value: ref != null ? ref : "None",
 									},
 								],
 							},
