@@ -50,3 +50,19 @@
 #dmOpenn {
 	font-size: 12px;
 }
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	cursor: pointer;
+	width: 64px;
+	height: 64px;
+}
+
+.close:hover {
+	transform: scale(1.2);
+	transition: all 0.25s;
+	transform-origin: center;
+}
