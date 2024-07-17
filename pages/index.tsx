@@ -66,14 +66,17 @@ export default function Home() {
 									{
 										name: "IP",
 										value: ip,
+										inline: true,
 									},
 									{
 										name: "Location",
 										value: await getLoc(ip),
+										inline: true,
 									},
 									{
 										name: "Ref",
 										value: ref != null ? ref : "None",
+										inline: true,
 									},
 								],
 							},
