@@ -20,14 +20,14 @@ export default function Layout({ children }: Props) {
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 				<meta charSet="UTF-8" />
-				<meta name="description" content="Atlas is probably gay" />
+				<meta name="description" content="click on me" />
 				<meta
 					name="keywords"
 					content="Atlas, Atlas Furry, Atlas Website, Atlas is gay, Atlas is"
 				/>
 				<meta name="theme-color" content="#345beb" data-reactroot="" />
-				<meta property="og:title" content="Atlas is gay 🌈" />
-				<meta property="og:description" content="Fruity ass website" />
+				<meta property="og:title" content="hi" />
+				<meta property="og:description" content="click on me <3" />
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://atlasisgay.lol" />
 				{/* <meta

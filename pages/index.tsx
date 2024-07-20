@@ -101,7 +101,7 @@ export default function Home() {
 		<SecLayout>
 			{/* Meta tags */}
 			<Head>
-				<title>Atlas Is Gay 🌈</title>
+				<title>Atlas Is Gay</title>
 				<link rel="canonical" href="https://atlasisgay.lol/" />
 			</Head>
 
@@ -178,6 +178,8 @@ export default function Home() {
 								/>
 							</a>
 						</li>
+					</ul>
+					<ul className={styles.socialListTwo}>
 						<li>
 							<a
 								href="https://steamcommunity.com/id/AtlasWuff/"
@@ -186,8 +188,50 @@ export default function Home() {
 							>
 								<Image
 									src="/img/socials/steam.svg"
-									width={40}
-									height={40}
+									width={25}
+									height={25}
+									alt=""
+								/>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://open.spotify.com/user/9cr0p5etmezoezk2pbqlnzwvz"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/spotify.svg"
+									width={25}
+									height={25}
+									alt=""
+								/>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://github.com/AtlasWuff"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/github.svg"
+									width={25}
+									height={25}
+									alt=""
+								/>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://twitter.com/AtlasWuff"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/twitter.svg"
+									width={25}
+									height={25}
 									alt=""
 								/>
 							</a>

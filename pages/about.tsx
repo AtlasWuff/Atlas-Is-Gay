@@ -20,7 +20,7 @@ export default function About() {
 		<SecLayout>
 			{/* Meta tags */}
 			<Head>
-				<title>Atlas Is Gay 🌈</title>
+				<title>Atlas Is Gay</title>
 				<link rel="canonical" href="https://atlasisgay.lol/" />
 			</Head>
 

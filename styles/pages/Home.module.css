@@ -14,6 +14,7 @@
 	list-style: none;
 	padding: 0;
 	margin-top: 15px;
+	margin-bottom: 12px;
 }
 
 .socialList li:not(:last-child) {
@@ -30,6 +31,30 @@
 }
 
 .socialList img {
+	filter: invert(89%) sepia(3%) saturate(55%) hue-rotate(285deg)
+		brightness(108%) contrast(98%);
+}
+.socialListTwo {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin-top: 0px;
+}
+
+.socialListTwo li:not(:last-child) {
+	margin-right: 15px;
+}
+
+.socialListTwo li {
+	cursor: pointer;
+}
+
+.socialListTwo li:hover {
+	transform: scale(1.2);
+	transition: transform 0.1s;
+}
+
+.socialListTwo img {
 	filter: invert(89%) sepia(3%) saturate(55%) hue-rotate(285deg)
 		brightness(108%) contrast(98%);
 }
