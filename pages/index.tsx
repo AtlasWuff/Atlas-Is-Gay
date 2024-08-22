@@ -237,6 +237,22 @@ export default function Home() {
 							</a>
 						</li>
 					</ul>
+					<ul className={styles.socialListThree}>
+						<li>
+							<a
+								href="https://twitter.com/NiceAtlass"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/age.svg"
+									width={15}
+									height={15}
+									alt=""
+								/>
+							</a>
+						</li>
+					</ul>
 					{showDiscordName && (
 						<>
 							<p className={styles.discName}>
