@@ -240,7 +240,7 @@ export default function Home() {
 					<ul className={styles.socialListThree}>
 						<li>
 							<a
-								href="https://twitter.com/NiceAtlass"
+								href="https://twitter.com/NiceAtlAss"
 								target="_blank"
 								rel="noreferrer"
 							>
