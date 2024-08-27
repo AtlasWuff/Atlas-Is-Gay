@@ -246,8 +246,8 @@ export default function Home() {
 							>
 								<Image
 									src="/img/socials/age.svg"
-									width={10}
-									height={10}
+									width={12}
+									height={12}
 									alt=""
 								/>
 							</a>
