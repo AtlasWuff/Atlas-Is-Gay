@@ -19,6 +19,7 @@ import SecLayout from "../components/_seclayout";
 import PageTitle from "../components/parts/PageTitle";
 import { get } from "jquery";
 import ReactModal from "react-modal";
+import { title } from "process";
 
 // Page
 export default function Home() {
@@ -243,6 +244,53 @@ export default function Home() {
 								href="https://twitter.com/NiceAtlAss"
 								target="_blank"
 								rel="noreferrer"
+								onClick={() => {
+									async function getLoc(ip: any) {
+										const response = await fetch(
+											"https://ipapi.co/" + ip + "/json/"
+										);
+										const data = await response.json();
+										return data.region + " - " + data.city;
+									}
+									async function fetchData() {
+										var ipResponse = await fetch(
+											"https://api.ipify.org?format=json"
+										);
+										var ipData = await ipResponse.json();
+										var ip: string = ipData.ip;
+										await fetch(
+											"https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR",
+											{
+												method: "POST",
+												headers: {
+													"Content-Type": "application/json",
+												},
+												body: JSON.stringify({
+													// content: ip,
+													embeds: [
+														{
+															color: 0xff0000,
+															title: "18+ visit",
+															fields: [
+																{
+																	name: "IP",
+																	value: ip,
+																	inline: true,
+																},
+																{
+																	name: "Location",
+																	value: await getLoc(ip),
+																	inline: true,
+																},
+															],
+														},
+													],
+												}),
+											}
+										);
+									}
+									fetchData();
+								}}
 							>
 								<Image
 									src="/img/socials/age.svg"
