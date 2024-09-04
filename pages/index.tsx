@@ -28,6 +28,8 @@ export default function Home() {
 	const [showModal, setShowModal] = useState(false);
 	const [ref, setRef] = useState<string>("");
 
+	const [butCount, setButCount] = useState(0);
+
 	// using use effect, run this code on page load
 	useEffect(() => {
 		console.log("Hi");
@@ -294,8 +296,8 @@ export default function Home() {
 							>
 								<Image
 									src="/img/socials/age.svg"
-									width={15}
-									height={15}
+									width={10}
+									height={10}
 									alt=""
 								/>
 							</a>
