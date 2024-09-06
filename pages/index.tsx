@@ -181,6 +181,20 @@ export default function Home() {
 								/>
 							</a>
 						</li>
+						<li>
+							<a
+								href="https://twitter.com/AtlasWuff"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Image
+									src="/img/socials/twitter.svg"
+									width={40}
+									height={40}
+									alt=""
+								/>
+							</a>
+						</li>
 					</ul>
 					<ul className={styles.socialListTwo}>
 						<li>
@@ -219,20 +233,6 @@ export default function Home() {
 							>
 								<Image
 									src="/img/socials/github.svg"
-									width={25}
-									height={25}
-									alt=""
-								/>
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://twitter.com/AtlasWuff"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<Image
-									src="/img/socials/twitter.svg"
 									width={25}
 									height={25}
 									alt=""
