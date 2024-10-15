@@ -175,6 +175,7 @@ export default function Home() {
 													height={100}
 													alt={`Quiz ${num}`}
 													onClick={() => {
+														alert("good boy");
 														setShowModal(!showModal);
 													}}
 												/>
@@ -184,6 +185,9 @@ export default function Home() {
 													width={100}
 													height={100}
 													alt={`Quiz ${num}`}
+													onClick={() => {
+														alert("try again :)");
+													}}
 												/>
 											)}
 										</li>
