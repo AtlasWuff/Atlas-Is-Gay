@@ -166,7 +166,7 @@ export default function Home() {
 							<div style={{ height: "20px" }}></div>
 							<ul className={styles.modalContentList}>
 								{[quizNums[0], quizNums[1], quizNums[2]].map((num) => (
-									<div>
+									<div key={num}>
 										<li key={num}>
 											{num == winNum ? (
 												<Image
