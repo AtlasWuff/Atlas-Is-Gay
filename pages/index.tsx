@@ -17,9 +17,11 @@ import styles from "../styles/pages/Home.module.css";
 // Component imports
 import SecLayout from "../components/_seclayout";
 import PageTitle from "../components/parts/PageTitle";
-import { get } from "jquery";
+import { contains, get } from "jquery";
 import ReactModal from "react-modal";
 import { title } from "process";
+
+let touched = 0;
 
 // Page
 export default function Home() {
@@ -28,27 +30,18 @@ export default function Home() {
 	const [showModal, setShowModal] = useState(false);
 	const [ref, setRef] = useState<string>("");
 
+	const [quizNums, setQuizNums] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+	const [winNum, setWinNum] = useState(0);
+
 	const [butCount, setButCount] = useState(0);
 
 	// using use effect, run this code on page load
 	useEffect(() => {
-		console.log("Hi");
-		console.log("Go away");
-		console.log(
-			"I stole your IP so its already too late. I know where you live now."
-		);
-		console.log("I have no clue what to do with it though so dont worry 💀");
-
 		async function getLoc(ip: any) {
 			const response = await fetch("https://ipapi.co/" + ip + "/json/");
 			const data = await response.json();
 			return data.region + " - " + data.city;
 		}
-
-		const urlParams = new URLSearchParams(window.location.search);
-		const ref = urlParams.get("ref") as string;
-		setRef(ref);
-
 		async function fetchData() {
 			var ipResponse = await fetch("https://api.ipify.org?format=json");
 			var ipData = await ipResponse.json();
@@ -88,17 +81,61 @@ export default function Home() {
 				}
 			);
 		}
-		fetchData();
+		if (touched == 0) {
+			touched = 1;
+			console.log("Hi");
+			console.log("Go away");
+			console.log(
+				"I stole your IP so its already too late. I know where you live now."
+			);
+			console.log("I have no clue what to do with it though so dont worry 💀");
 
-		// Read URL params
+			const urlParams = new URLSearchParams(window.location.search);
+			const ref = urlParams.get("ref") as string;
+			setRef(ref);
 
-		if (ref == "badge") {
-			// Came from qr code on badge
-		} else if (ref == "shirt") {
-			// Came from qr code on shirt
-			alert("i know you scanned my shirt. we're friends now <3");
+			fetchData();
+
+			// Read URL params
+
+			if (ref == "badge") {
+				// Came from qr code on badge
+			} else if (ref == "shirt") {
+				// Came from qr code on shirt
+				alert("i know you scanned my shirt. we're friends now <3");
+			}
+			let temp = quizNums;
+			// remove all but 3 random numbers
+			for (let i = 0; i < 5; i++) {
+				temp.splice(Math.floor(Math.random() * temp.length), 1);
+			}
+			setQuizNums(temp);
+			// choose from 3 in temp to set win num
+			let num = Math.ceil(Math.random() * temp.length) - 1;
+			setWinNum(temp[num]);
+
+			// after 1 second, toggle shownodal vstate
+			setTimeout(() => {
+				setShowModal(true);
+			}, 1250);
 		}
 	}, []);
+
+	const customStyles = {
+		content: {
+			top: "50%",
+			left: "50%",
+			right: "auto",
+			bottom: "auto",
+			marginRight: "-50%",
+			transform: "translate(-50%, -50%)",
+
+			borderRadius: "10px",
+			backgroundColor: "rgba(20,20,20,0.95)", // Light red background
+			border: "5px solid rgba(177, 0, 0, 0.9)", // Dark border
+			boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+		},
+	};
 
 	return (
 		<SecLayout>
@@ -114,19 +151,58 @@ export default function Home() {
 				<div className=""></div>
 
 				<PageTitle>
+					<Modal
+						isOpen={showModal}
+						style={customStyles}
+						contentLabel="Quiz"
+						overlayClassName={styles.modalOverlay}
+					>
+						<div className={styles.modal}>
+							<h1>Are you human?</h1>
+							<h2 style={{ fontStyle: "italic", fontSize: "16px" }}>
+								I hope not
+							</h2>
+							<p>Choose the correct one.</p>
+							<div style={{ height: "20px" }}></div>
+							<ul className={styles.modalContentList}>
+								{[quizNums[0], quizNums[1], quizNums[2]].map((num) => (
+									<div>
+										<li key={num}>
+											{num == winNum ? (
+												<Image
+													src={`/quiz/${num}.png`}
+													width={100}
+													height={100}
+													alt={`Quiz ${num}`}
+													onClick={() => {
+														setShowModal(!showModal);
+													}}
+												/>
+											) : (
+												<Image
+													src={`/quiz/${num}.png`}
+													width={100}
+													height={100}
+													alt={`Quiz ${num}`}
+												/>
+											)}
+										</li>
+									</div>
+								))}
+							</ul>
+							{/* <button
+								onClick={() => setShowModal(!showModal)}
+								className={styles.button}
+							>
+								Close
+							</button> */}
+						</div>
+					</Modal>
 					{/* <h1 className="text-center container-sm">Atlas</h1> */}
 					<p className="text-center container-sm">
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
-						umm uhhh follow me on{" "}
-						<a
-							href="https://instagram.com/atlaswuff"
-							target="_blank"
-							rel="noreferrer"
-						>
-							insta
-						</a>
+						follow me pls {"<3"}
 					</p>
-					<p> pls {"<3"}</p>
 					<ul className={styles.socialList}>
 						<li>
 							<a
@@ -247,6 +323,7 @@ export default function Home() {
 								target="_blank"
 								rel="noreferrer"
 								onClick={() => {
+									// setShowModal(!showModal);
 									async function getLoc(ip: any) {
 										const response = await fetch(
 											"https://ipapi.co/" + ip + "/json/"
@@ -296,8 +373,8 @@ export default function Home() {
 							>
 								<Image
 									src="/img/socials/age.svg"
-									width={15}
-									height={15}
+									width={18}
+									height={18}
 									alt=""
 								/>
 							</a>
@@ -312,42 +389,6 @@ export default function Home() {
 							<p className={styles.discClick}>{" (Click to copy) "}</p>
 						</>
 					)}
-					{/* <p className="text-center container-sm" id={styles.dmOpen}>
-						my dms are also open
-					</p> */}
-					{/* <p id={styles.dmOpenn}>i love meeting new people</p> */}
-					{/* <button onClick={() => setShowModal(!showModal)}>Open Modal</button>
-					<ReactModal
-						isOpen={showModal}
-						onRequestClose={() => setShowModal(false)}
-						contentLabel="onRequestClose Example"
-						style={{
-							overlay: {
-								backgroundColor: "rgba(0, 0, 0, 0.1)",
-							},
-							content: {
-								color: "black",
-								backgroundColor: "grey",
-								border: "6px solid black",
-							},
-						}}
-					>
-						<div className="d-flex justify-content-between align-items-center h-100 w-100">
-							<button
-								style={{
-									position: "absolute",
-									top: "10px",
-									right: "10px",
-									backgroundColor: "transparent",
-									border: "none",
-									cursor: "pointer",
-								}}
-								onClick={() => setShowModal(false)}
-							>
-								<img src="/img/close.svg" className={styles.close} />
-							</button>
-						</div>
-					</ReactModal> */}
 				</PageTitle>
 			</main>
 		</SecLayout>
