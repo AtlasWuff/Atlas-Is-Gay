@@ -240,7 +240,7 @@ export default function Home() {
 							</a>
 						</li>
 					</ul>
-					<ul className={styles.socialListThree}>
+					{/* <ul className={styles.socialListThree}>
 						<li>
 							<a
 								href="https://twitter.com/NiceAtlAss"
@@ -302,7 +302,7 @@ export default function Home() {
 								/>
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 					{showDiscordName && (
 						<>
 							<p className={styles.discName}>
@@ -312,42 +312,6 @@ export default function Home() {
 							<p className={styles.discClick}>{" (Click to copy) "}</p>
 						</>
 					)}
-					{/* <p className="text-center container-sm" id={styles.dmOpen}>
-						my dms are also open
-					</p> */}
-					{/* <p id={styles.dmOpenn}>i love meeting new people</p> */}
-					{/* <button onClick={() => setShowModal(!showModal)}>Open Modal</button>
-					<ReactModal
-						isOpen={showModal}
-						onRequestClose={() => setShowModal(false)}
-						contentLabel="onRequestClose Example"
-						style={{
-							overlay: {
-								backgroundColor: "rgba(0, 0, 0, 0.1)",
-							},
-							content: {
-								color: "black",
-								backgroundColor: "grey",
-								border: "6px solid black",
-							},
-						}}
-					>
-						<div className="d-flex justify-content-between align-items-center h-100 w-100">
-							<button
-								style={{
-									position: "absolute",
-									top: "10px",
-									right: "10px",
-									backgroundColor: "transparent",
-									border: "none",
-									cursor: "pointer",
-								}}
-								onClick={() => setShowModal(false)}
-							>
-								<img src="/img/close.svg" className={styles.close} />
-							</button>
-						</div>
-					</ReactModal> */}
 				</PageTitle>
 			</main>
 		</SecLayout>
