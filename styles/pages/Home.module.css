@@ -75,10 +75,10 @@
 	cursor: pointer;
 }
 
-.socialListThree li:hover {
-	transform: scale(1.2);
-	transition: transform 0.1s;
-}
+/* .socialListThree li:hover {
+	transform: scale(1);
+	transition: transform 0.05s;
+} */
 
 .socialListThree img {
 	filter: invert(89%) sepia(3%) saturate(55%) hue-rotate(285deg)
@@ -201,4 +201,14 @@
 .button:hover {
 	background-color: rgba(177, 0, 0, 0.9);
 	color: #f5f4f4;
+}
+
+#freaky {
+	font-size: 12px;
+	margin-top: 6px;
+	color: var(--font-color-link);
+}
+
+#freaky:hover {
+	color: var(--font-color-link-hover);
 }

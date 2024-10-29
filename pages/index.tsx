@@ -114,10 +114,10 @@ export default function Home() {
 			let num = Math.ceil(Math.random() * temp.length) - 1;
 			setWinNum(temp[num]);
 
-			// after 1 second, toggle shownodal vstate
-			setTimeout(() => {
-				setShowModal(true);
-			}, 1250);
+			// // after 1 second, toggle shownodal vstate
+			// setTimeout(() => {
+			// 	setShowModal(true);
+			// }, 1250);
 		}
 	}, []);
 
@@ -375,12 +375,13 @@ export default function Home() {
 									fetchData();
 								}}
 							>
-								<Image
+								<p id={styles.freaky}>a fellow freak?</p>
+								{/* <Image
 									src="/img/socials/age.svg"
 									width={18}
 									height={18}
 									alt=""
-								/>
+								/> */}
 							</a>
 						</li>
 					</ul>
