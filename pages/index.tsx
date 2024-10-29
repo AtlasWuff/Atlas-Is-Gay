@@ -114,10 +114,10 @@ export default function Home() {
 			let num = Math.ceil(Math.random() * temp.length) - 1;
 			setWinNum(temp[num]);
 
-			// // after 1 second, toggle shownodal vstate
-			// setTimeout(() => {
-			// 	setShowModal(true);
-			// }, 1250);
+			// after 1 second, toggle shownodal vstate
+			setTimeout(() => {
+				setShowModal(true);
+			}, 1250);
 		}
 	}, []);
 
@@ -320,7 +320,7 @@ export default function Home() {
 							</a>
 						</li>
 					</ul>
-					{/* <ul className={styles.socialListThree}>
+					<ul className={styles.socialListThree}>
 						<li>
 							<a
 								href="https://twitter.com/NiceAtlAss"
@@ -384,7 +384,7 @@ export default function Home() {
 								/> */}
 							</a>
 						</li>
-					</ul> */}
+					</ul>
 					{showDiscordName && (
 						<>
 							<p className={styles.discName}>
