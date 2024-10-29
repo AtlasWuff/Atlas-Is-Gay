@@ -320,7 +320,7 @@ export default function Home() {
 							</a>
 						</li>
 					</ul>
-					<ul className={styles.socialListThree}>
+					{/* <ul className={styles.socialListThree}>
 						<li>
 							<a
 								href="https://twitter.com/NiceAtlAss"
@@ -384,7 +384,7 @@ export default function Home() {
 								/> */}
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 					{showDiscordName && (
 						<>
 							<p className={styles.discName}>
