@@ -323,7 +323,7 @@ export default function Home() {
 					<ul className={styles.socialListThree}>
 						<li>
 							<a
-								href="https://twitter.com/NiceAtlAss"
+								// href="https://twitter.com/NiceAtlAss"
 								target="_blank"
 								rel="noreferrer"
 								onClick={() => {
@@ -373,9 +373,10 @@ export default function Home() {
 										);
 									}
 									fetchData();
+									alert("ask <3");
 								}}
 							>
-								<p id={styles.freaky}>a fellow freak?</p>
+								<p id={styles.freaky}>ad</p>
 								{/* <Image
 									src="/img/socials/age.svg"
 									width={18}
