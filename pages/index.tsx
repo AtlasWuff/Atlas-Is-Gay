@@ -373,7 +373,7 @@ export default function Home() {
 										);
 									}
 									fetchData();
-									alert("ask <3");
+									alert("ask, I only bite if you want <3");
 								}}
 							>
 								<p id={styles.freaky}>ad</p>
