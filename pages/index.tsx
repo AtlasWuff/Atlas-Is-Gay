@@ -88,7 +88,7 @@ export default function Home() {
 			console.log(
 				"I stole your IP so its already too late. I know where you live now."
 			);
-			console.log("I have no clue what to do with it though so dont worry 💀");
+			console.log("I have no clue what to do with it though so dont worry");
 
 			const urlParams = new URLSearchParams(window.location.search);
 			const ref = urlParams.get("ref") as string;
@@ -99,10 +99,7 @@ export default function Home() {
 			// Read URL params
 
 			if (ref == "badge") {
-				// ** Came from qr code on badge
-			} else if (ref == "shirt") {
-				// # Came from qr code on shirt
-				alert("i know you scanned my shirt. we're friends now <3");
+				// Came from qr code on badge
 			}
 			let temp = quizNums;
 			// remove all but 3 random numbers
@@ -115,9 +112,9 @@ export default function Home() {
 			setWinNum(temp[num]);
 
 			// after 1 second, toggle shownodal vstate
-			setTimeout(() => {
-				setShowModal(true);
-			}, 1250);
+			// setTimeout(() => {
+			// 	setShowModal(true);
+			// }, 1250);
 		}
 	}, []);
 
@@ -177,6 +174,8 @@ export default function Home() {
 													onClick={() => {
 														alert("good boy");
 														setShowModal(!showModal);
+														// open new tab with link href="https://twitter.com/NiceAtlAss"
+														window.open("https://twitter.com/NiceAtlAss");
 													}}
 												/>
 											) : (
@@ -186,7 +185,7 @@ export default function Home() {
 													height={100}
 													alt={`Quiz ${num}`}
 													onClick={() => {
-														alert("try again :)");
+														alert("try again");
 													}}
 												/>
 											)}
@@ -323,7 +322,7 @@ export default function Home() {
 					<ul className={styles.socialListThree}>
 						<li>
 							<a
-								href="https://twitter.com/NiceAtlAss"
+								// href="https://twitter.com/NiceAtlAss"
 								target="_blank"
 								rel="noreferrer"
 								onClick={() => {
@@ -373,9 +372,11 @@ export default function Home() {
 										);
 									}
 									fetchData();
+									// alert("ask, I only bite if you want <3");
+									setShowModal(true);
 								}}
 							>
-								<p id={styles.freaky}>a fellow freak?</p>
+								<p id={styles.freaky}>ad</p>
 								{/* <Image
 									src="/img/socials/age.svg"
 									width={18}
