@@ -99,9 +99,9 @@ export default function Home() {
 			// Read URL params
 
 			if (ref == "badge") {
-				// Came from qr code on badge
+				// ** Came from qr code on badge
 			} else if (ref == "shirt") {
-				// Came from qr code on shirt
+				// # Came from qr code on shirt
 				alert("i know you scanned my shirt. we're friends now <3");
 			}
 			let temp = quizNums;
