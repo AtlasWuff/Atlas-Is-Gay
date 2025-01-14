@@ -28,6 +28,8 @@ export default function Home() {
 	// showDiscordName state
 	const [showDiscordName, setShowDiscordName] = useState(false);
 	const [showModal, setShowModal] = useState(false);
+	const [showModal2, setShowModal2] = useState(false);
+	const [textQuizAnswer, setTextQuizAnswer] = useState("");
 	const [ref, setRef] = useState<string>("");
 
 	const [quizNums, setQuizNums] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
@@ -112,9 +114,9 @@ export default function Home() {
 			setWinNum(temp[num]);
 
 			// after 1 second, toggle shownodal vstate
-			// setTimeout(() => {
-			// 	setShowModal(true);
-			// }, 1250);
+			setTimeout(() => {
+				setShowModal(true);
+			}, 1250);
 		}
 	}, []);
 
@@ -159,7 +161,7 @@ export default function Home() {
 							<h2 style={{ fontStyle: "italic", fontSize: "16px" }}>
 								I hope not
 							</h2>
-							<p>Choose the correct one.</p>
+							{/* <p>Choose the correct one.</p> */}
 							<div style={{ height: "20px" }}></div>
 							<ul className={styles.modalContentList}>
 								{[quizNums[0], quizNums[1], quizNums[2]].map((num) => (
@@ -174,8 +176,8 @@ export default function Home() {
 													onClick={() => {
 														alert("good boy");
 														setShowModal(!showModal);
-														// open new tab with link href="https://twitter.com/NiceAtlAss"
-														window.open("https://twitter.com/NiceAtlAss");
+														// // open new tab with link href="https://twitter.com/NiceAtlAss"
+														// window.open("https://twitter.com/GrabMyAtlAss");
 													}}
 												/>
 											) : (
@@ -201,7 +203,39 @@ export default function Home() {
 							</button> */}
 						</div>
 					</Modal>
-					{/* <h1 className="text-center container-sm">Atlas</h1> */}
+					<Modal
+						isOpen={showModal2}
+						style={customStyles}
+						contentLabel="Quiz"
+						overlayClassName={styles.modalOverlay}
+					>
+						<div className={styles.modal}>
+							<h1>What's my favorite place to eat?</h1>
+							{/* <p>Choose the correct one.</p> */}
+							<div style={{ height: "15px" }}></div>
+							{/* a input text box that updates the state checking upon button press below it if text is "domu" without worrying abotu caps */}
+							{/* then opens like to twitter.com/GrabMyAtlAss if domu */}
+							<input
+								type="text"
+								id={styles.domuInputBox}
+								value={textQuizAnswer}
+								onChange={(e) => setTextQuizAnswer(e.target.value)}
+							/>
+							<div style={{ height: "10px" }}></div>
+							<button
+								onClick={() => {
+									if (textQuizAnswer.toLowerCase() == "domu") {
+										window.open("https://twitter.com/GrabMyAtlAss");
+									}
+								}}
+							>
+								Submit
+							</button>
+						</div>
+					</Modal>
+					{/* <h1 class
+					{/* <h1 class
+					Name="text-center container-sm">Atlas</h1> */}
 					<p className="text-center container-sm">
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
 						follow me pls {"<3"}
@@ -373,7 +407,12 @@ export default function Home() {
 									}
 									fetchData();
 									// alert("ask, I only bite if you want <3");
-									setShowModal(true);
+									const answer = prompt("What's my favorite place to eat?");
+									if (answer && answer.toLowerCase().trim() === "domu") {
+										window.open("https://twitter.com/GrabMyAtlAss");
+									} else {
+										alert("dont bother");
+									}
 								}}
 							>
 								<p id={styles.freaky}>ad</p>
