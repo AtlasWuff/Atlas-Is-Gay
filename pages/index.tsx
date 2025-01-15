@@ -210,7 +210,7 @@ export default function Home() {
 						overlayClassName={styles.modalOverlay}
 					>
 						<div className={styles.modal}>
-							<h1>What's my favorite place to eat?</h1>
+							<h1>What&apos;s my favorite place to eat?</h1>
 							{/* <p>Choose the correct one.</p> */}
 							<div style={{ height: "15px" }}></div>
 							{/* a input text box that updates the state checking upon button press below it if text is "domu" without worrying abotu caps */}
