@@ -238,7 +238,7 @@ export default function Home() {
 					Name="text-center container-sm">Atlas</h1> */}
 					<p className="text-center container-sm">
 						{/* eslint-disable-next-line react/no-unescaped-entities */}
-						<a target="_blank" href="https://t.me/eatmyatlass">
+						<a target="_blank" rel="noreferrer" href="https://t.me/eatmyatlass">
 							my food channel
 						</a>
 					</p>
