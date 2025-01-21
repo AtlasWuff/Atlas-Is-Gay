@@ -212,3 +212,10 @@
 #freaky:hover {
 	color: var(--font-color-link-hover);
 }
+
+/* background color white with red border */
+#domuInputBox {
+	background-color: #fff;
+	border: 1px solid #ff0000;
+	border-radius: 5px;
+}
