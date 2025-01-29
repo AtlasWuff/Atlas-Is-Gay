@@ -415,14 +415,14 @@ export default function Home() {
 									}
 									fetchData();
 									// alert("ask, I only bite if you want <3");
-									const answer = prompt(
-										"What's my favorite place to eat? ifykyk🥢"
-									);
-									if (answer && answer.toLowerCase().trim() === "domu") {
+									// const answer = prompt(
+									// 	"What's my favorite place to eat? ifykyk🥢"
+									// );
+									// if (answer && answer.toLowerCase().trim() === "domu") {
 										window.open("https://twitter.com/EatMyAtlAss");
-									} else {
-										alert("dont bother");
-									}
+									// } else {
+									// 	alert("dont bother");
+									// }
 								}}
 							>
 								<p id={styles.freaky}>ad</p>
