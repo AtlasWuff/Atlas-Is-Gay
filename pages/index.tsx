@@ -359,9 +359,6 @@ export default function Home() {
 						</li>
 						<li>
 							<a
-								href=""
-								target="_blank"
-								rel="noreferrer"
 								onClick={() => alert("ask me for it")}
 							>
 								<Image
