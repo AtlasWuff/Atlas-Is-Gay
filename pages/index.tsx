@@ -357,6 +357,21 @@ export default function Home() {
 								/>
 							</a>
 						</li>
+						<li>
+							<a
+								href=""
+								target="_blank"
+								rel="noreferrer"
+								onClick={() => alert("ask me for it")}
+							>
+								<Image
+									src="/img/socials/snapchat.svg"
+									width={25}
+									height={25}
+									alt=""
+								/>
+							</a>
+						</li>
 					</ul>
 					<ul className={styles.socialListThree}>
 						<li>
@@ -419,7 +434,7 @@ export default function Home() {
 									// 	"What's my favorite place to eat? ifykyk🥢"
 									// );
 									// if (answer && answer.toLowerCase().trim() === "domu") {
-										window.open("https://twitter.com/EatMyAtlAss");
+									window.open("https://twitter.com/EatMyAtlAss");
 									// } else {
 									// 	alert("dont bother");
 									// }
