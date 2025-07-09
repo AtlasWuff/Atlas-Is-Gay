@@ -437,7 +437,7 @@ export default function Home() {
 									// }
 								}}
 							>
-								<p id={styles.freaky}></p>
+								<p id={styles.freaky}>ad</p>
 								{/* <Image
 									src="/img/socials/age.svg"
 									width={18}
